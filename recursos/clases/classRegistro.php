@@ -3,23 +3,24 @@
 
 	class user{
 
-		function agregarRegistro($nombre, $apellidos, $username, $password){
-			$conexion = new mysqli('localhost','root','1234','phplogin')
-			or die("Fallo en el establecimiento de la conexion");
+		function agregarRegistro($nombre, $apellidos, $email, $password){
+			$mysqliDebug = true;
+			$conexion = @new mysqli('localhost','root','root','gymtrainer');
 
-			if (!$conexion) {
-			    die('Error de Conexión (' . mysqli_connect_errno() . ') '
-			            . mysqli_connect_error());
+			if ($conexion->connect_errno) {
+				echo '<p>There was an error connecting to the database!</p>';
+				if ($mysqliDebug) {
+					echo $conexion->connect_error;
+				}
+				die();
 			}
 
-			echo 'Éxito... ' . mysqli_get_host_info($conexion) . "\n";
-
-
-			$sql = "INSERT INTO users(username,password,nombre,apellidos) VALUES(". $username .",'". $password."','".$nombre."','".$apellidos."')";
+			$sql = "INSERT INTO usuario(email,nombre,apellido,password) VALUES('". $email ."','". $nombre."','".$apellidos."','".$password."')";
 			$result = mysqli_query($conexion, $sql);
 
-			if($conexion->query($sql) === false){
-				return "error";
+			if (!$result and $mysqliDebug) {
+				echo "<p>There was an error in query: $sql</p>";
+				echo $conexion->error;
 			}
 
 			return $result;

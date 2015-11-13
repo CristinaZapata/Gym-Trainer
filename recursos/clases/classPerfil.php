@@ -4,7 +4,7 @@
 	class user{
 
 		function modificarPerfil($contrasenia, $fecha_nac, $sexo, $altura, $peso){
-			$conexion = new mysqli('localhost','root','1234','phplogin')
+			$conexion = new mysqli('localhost','root','root','gymtrainer')
 			or die("Fallo en el establecimiento de la conexion");
 
 			if (!$conexion) {
