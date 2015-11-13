@@ -5,7 +5,7 @@
 
 		function agregarRegistro($nombre, $apellidos, $email, $password){
 			$mysqliDebug = true;
-			$conexion = @new mysqli('localhost','root','root','gymtrainer');
+			$conexion = @new mysqli('localhost','root','Konichiwa%07','gymtrainer2');
 
 			if ($conexion->connect_errno) {
 				echo '<p>There was an error connecting to the database!</p>';

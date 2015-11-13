@@ -3,7 +3,7 @@
 	class administrator{
 
 		function verVideosCategoria($categoria){
-			$conexion= new mysqli('localhost','root','root','gymtrainer')
+			$conexion= new mysqli('localhost','root','Konichiwa%07','gymtrainer2')
 			or die("Fallo en el establecimiento de la conexion");
 
 			$sql = "SELECT * FROM video WHERE categoria='".$categoria."'";
