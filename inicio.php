@@ -60,9 +60,9 @@
 
                                 <ul>
                                         <li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-                                        <li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Perfil</span></a></li>
                                         <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-dribbble">Rutinas</span></a></li>
                                         <li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Videos</span></a></li>
+                                        <li><a href="#perfil" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Perfil</span></a></li>
                                         <li><a href='recursos/servicios/CerrarSesion.php?cerrar=true' id="contact-link" class="skel-layers-ignoreHref"><span align="center">Cerrar Sesi&oacute;n</span></a></li>
                                 </ul>
                         </nav>
@@ -147,34 +147,6 @@
                                             <footer>
                                                     <a href="#portfolio" class="button scrolly">Ir a mi perfil</a>
                                             </footer>
-
-                                    </div>
-                            </section>
-
-                    <!-- Perfil -->
-                            <section id="portfolio" class="two">
-                                    <div class="container">
-
- 											<header>
-
- 												<div id = "fitgirl"> <img src="images/FitGirl.png"/></div>
-                                                    <h2 class="alt"><strong>Marisol Salgado</strong></h2>
-                                                    <p align="left">Correo electrónico: <span style="padding-left:30px"><input type="text" placeholder="ma.salg@gmail.com"/> </span><br/> <br/>
-                                                    Contraseña:<span style="padding-left:95px"><input type="password" /> </span><br/><br/>
-
-                                                    Fecha de nacimiento:<span style="padding-left:15px"><input type="date"/></span><br/><br/>
-                                                    Sexo:<br/>
-                                                    	<input type="radio" name="sexo" value="femenino">Femenino<br/>
-														<input type="radio" name="sexo" value="masculino">Masculino<br/>
-                                                    <br/>
-                                                    Altura: <span style="padding-left:20px"><input type="text" width="20"/> m</span><br/><br/>
-                                                    Peso: <span style="padding-left:20px"><input type="text" width="20"/> kg</span></p>
-
-                                                    <a href="#portfolio" class="button scrolly">Actualizar</a>
-
-
-                                            </header>
-
 
                                     </div>
                             </section>
@@ -379,6 +351,35 @@
 
                                     </div>
                             </section>
+                            
+                            <!-- Perfil -->
+                            <section id="perfil" class="two">
+                                    <div class="container">
+
+ 											<header>
+ 											
+ 												<div id = "fitgirl"> <img src="images/FitGirl.png"/></div>
+                                                    <h2 class="alt"><strong>Ana López</strong></h2>
+                                                    <p align="left">Correo electrónico: <span style="padding-left:30px"><input type="text" placeholder="ma.salg@gmail.com"/> </span><br/> <br/>
+                                                    Contraseña:<span style="padding-left:95px"><input type="password" /> </span><br/><br/>
+                                                    
+                                                    <form id="formaPerfil" id="forma" action="recursos/servicios/Perfil.php" method="post">
+														Fecha de nacimiento:<span style="padding-left:15px"><input id = "fecha_nac" name = "fecha_nac" type="date"/></span><br/><br/>
+														Sexo:<br/>
+															<input type="radio" class="radioBtnSexo" name="sexo" value="Femenino">Femenino<br/>
+															<input type="radio" class="radioBtnSexo" name="sexo" value="Masculino">Masculino<br/>                                                   
+														<br/>
+														Altura: <span style="padding-left:20px"><input id = "altura" name = "altura" type="text" width="20"/> m</span><br/><br/>
+														Peso: <span style="padding-left:20px"><input id = "peso" name = "peso" type="text" width="20"/> kg</span></p>
+													
+														<a id="registrarPerfil" class="button scrolly">Actualizar</a>
+                                                    </form>
+                                                    
+                                            </header>
+
+
+                                    </div>
+                            </section>
             </div>
 
     <!-- Footer -->
@@ -413,7 +414,7 @@
     		<!-- Rutina Pierna -->
     		<script src="sliderengine/initslider-4.js"></script>
     		<script src="assets/js/controller.js"></script>
-
+    		<script src="js/controllerPerfil.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 

@@ -2608,6 +2608,12 @@
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
+				
+				#fitgirl img{
+					position:absolute;
+					left: 800px;
+					top: 2800px;
+				}
 
 	}
 	
