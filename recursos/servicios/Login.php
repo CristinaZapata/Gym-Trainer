@@ -4,25 +4,32 @@
 	ini_set('display_errors',1);
 	error_reporting(E_ALL);
 
-    if(isset($_POST['username']) && isset($_POST['password'])){
+       if(isset($_POST['username']) && isset($_POST['password'])){
 
-		$username= $_POST['username'];
-		$password= $_POST['password'];
+			require_once('../clases/classLogin.php');
 
-		$u1="mariana@me.com";
-		$p1="mariana";
-		$u2="cristina@gmail.com";
-		$p2="cris";
-		$u3="leslie@gmail.com";
-		$p3="les";
+			$email= $_POST['username'];
+			$password= $_POST['password'];
 
-		if(($username == $u1 && $password==$p1) || ($username == $u2 && $password==$p2) || ($username == $u3 && $password==$p3)){
-			echo "LOGIN EXITOSO";
+			$login = new login();
+			$result= $login->loginUser($email);
+
+			$row = mysqli_fetch_array($result);
+
+			if($row !== null){
+				if($row["password"]== $password){
+					session_start();
+					$_SESSION['emailUsuario'] = $row['email'];
+					echo 'no_errors';
+					//header("Location: http://localhost/Gym-Trainer/inicio.php");
+				}else{
+					 echo "Password incorrecto";
+				}
+			}else{
+				echo "El usuario o password son incorrectos";
+			}
+
 		}else{
-			echo "Usuario o contrase&ntilde;a no encontrado.";
+			echo "Llenar todos los campos";
 		}
-
-	}else{
-		echo "Ño";
-	}
 ?>

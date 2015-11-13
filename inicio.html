@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(empty($_SESSION['emailUsuario'])) {
+        header('Location: login.php');
+    }
+?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -19,7 +27,7 @@
     		<link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
 
 
-	
+
 	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
 	<!-- End WOWSlider.com HEAD section -->
 	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
@@ -80,9 +88,9 @@
                     <!-- Intro -->
                             <section id="top" class="one dark cover">
                                     <div class="container">
-	
+
 	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
-	
+
 	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
 	<div id="wowslider-container8">
 	<div class="ws_images"><ul>
@@ -102,7 +110,7 @@
 		<a href="#" title="workout7"><span><img src="data8/tooltips/workout7.jpg" alt="workout7"/>6</span></a>
 	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com/vi">css slider</a> by WOWSlider.com v8.6m</div>
 	<div class="ws_shadow"></div>
-	</div>	
+	</div>
 	<script type="text/javascript" src="engine8/wowslider.js"></script>
 	<script type="text/javascript" src="engine8/script.js"></script>
 	<!-- End WOWSlider.com BODY section -->
@@ -113,7 +121,7 @@
                                                     <p>Ligula scelerisque justo sem accumsan diam quis<br />
                                                     vitae natoque dictum sollicitudin elementum.</p>
                                             </header>-->
-                                            
+
 											<!--<div class="div1"><h2>Bienvenido</h2>
 												<p></p>
 											</div>
@@ -131,8 +139,8 @@
 													<em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
 												</div>
 											</div>-->
-											
-											
+
+
 
 
                                             <footer>
@@ -147,23 +155,23 @@
                                     <div class="container">
 
  											<header>
- 											
+
  												<div id = "fitgirl"> <img src="images/FitGirl.png"/></div>
                                                     <h2 class="alt"><strong>Marisol Salgado</strong></h2>
                                                     <p align="left">Correo electrónico: <span style="padding-left:30px"><input type="text" placeholder="ma.salg@gmail.com"/> </span><br/> <br/>
                                                     Contraseña:<span style="padding-left:95px"><input type="password" /> </span><br/><br/>
-                                                    
+
                                                     Fecha de nacimiento:<span style="padding-left:15px"><input type="date"/></span><br/><br/>
                                                     Sexo:<br/>
                                                     	<input type="radio" name="sexo" value="femenino">Femenino<br/>
-														<input type="radio" name="sexo" value="masculino">Masculino<br/>                                                   
+														<input type="radio" name="sexo" value="masculino">Masculino<br/>
                                                     <br/>
                                                     Altura: <span style="padding-left:20px"><input type="text" width="20"/> m</span><br/><br/>
                                                     Peso: <span style="padding-left:20px"><input type="text" width="20"/> kg</span></p>
-                                                    
+
                                                     <a href="#portfolio" class="button scrolly">Actualizar</a>
-                                                    
-                                                    
+
+
                                             </header>
 
 
@@ -352,7 +360,7 @@
     		<!-- Rutina Pierna -->
     		<script src="sliderengine/initslider-4.js"></script>
     		<script src="assets/js/controller.js"></script>
-    		
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -362,6 +370,6 @@
         interval: 3000 //changes the speed
     })
     </script>
-    			
+
 	</body>
 </html>

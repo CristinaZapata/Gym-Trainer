@@ -5,26 +5,38 @@
 
        if(isset($_POST['nombre']) && isset($_POST['apellidos']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password2'])){
 
-			//require_once('../clases/classRegistro.php');
+			require_once('../clases/classRegistro.php');
+			include "class.emailverify.php";
 
-			//registro
 			$nombre= $_POST['nombre'];
 			$apellidos= $_POST['apellidos'];
-			$username= $_POST['username'];
+			$email= $_POST['username'];
 			$password= $_POST['password'];
 			$password2= $_POST['password2'];
 
-			echo "success";
+			$verify = new EmailVerify();
+			//$verify->debug_on = true;
+			$verEmail;
 
-			/*if($password == $password2){
+			$verify->local_user = 'localuser';	//username of your address from which you are sending message to verify
+			$verify->local_host = 'localhost';	//domain name of your address
+
+			if($verify->verify($email)){
+				$verEmail=1;
 				$user = new user();
-				echo $user->agregarRegistro($nombre, $apellidos, $username, $password);
+				$result= $user->agregarRegistro($nombre, $apellidos, $email, $password);
 			}else{
-				echo "Contraseñas no coinciden";
-			}*/
+				$result=0;
+				$verEmail=0;
+				echo 'Escriba un email existente';
+			}
+
+			if($result == 1 && $verEmail==1){
+				echo 'no_errors';
+			}
 
 		}else{
-			echo "Ño";
+			echo "Llenar todos los campos";
 		}
 
 ?>
