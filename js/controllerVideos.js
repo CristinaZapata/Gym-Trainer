@@ -4,7 +4,6 @@ $(document).ready(function () {
         function mostrarVideos(cat) {
             $.post("recursos/servicios/resConsultarVideos.php", {categoria: cat},
 				function (res) {
-                    //console.log(res);
                     if (res !== null) {
                         var videos = JSON.parse(res);
                         if(cat == "Pierna"){
@@ -26,10 +25,6 @@ $(document).ready(function () {
              });
 	     }
     function next(arrI, index, size){
-        /*if(index==2){
-            size=arr.length-3;
-        }*/
-
         if(size > 0){
 			if(size >= 3){
                 $('.cuadro1').show();
@@ -127,14 +122,12 @@ $(document).ready(function () {
         $('#DivInicio').hide();
         $('#NoRes').hide();
         var text = $('#vidBuscar').val();
-        console.log("text",text);
         if(text != ''){
         function fitroVideos(text) {
             $.post("recursos/servicios/resFiltroVideos.php", {texto: text},
 				function (res) {
                     if (res !== "0 resultados") {
                         videos = JSON.parse(res);
-                        console.log(videos);
                         resultados =[];
                         for (var j in videos) {
                             resultados[j] = videos[j][0]+";"+videos[j][1]+";"+videos[j][2];
@@ -214,15 +207,12 @@ $(document).ready(function () {
         mostrarVideos(catP);
         $('#NoRes').hide();
         $('#DivInicio').hide();
-        console.log("arrP: "+arrP[2]);
         select = 0;
         size = arrP.length;
         i=0;
         var resfun = next(arrP, i, size);
         i = resfun[0];
         size = resfun[1];
-        console.log("sizeP", size);
-        console.log("index", i);
         if(size > 0) {
             $('#PNext').show();
         }
@@ -233,15 +223,12 @@ $(document).ready(function () {
         $('#NoRes').hide();
         $('#DivInicio').hide();
         mostrarVideos(catA);
-        console.log("arrA: "+arrA[0]);
         select = 1;
         size = arrA.length;
         i=0;
         var resfun = next(arrA, i, size);
         i = resfun[0];
         size = resfun[1];
-        console.log("sizeA", size);
-        console.log("index", i);
         if(size > 0){
             $('#PNext').show();
         }
@@ -252,15 +239,12 @@ $(document).ready(function () {
         $('#NoRes').hide();
         $('#DivInicio').hide();
         mostrarVideos(catB);
-        console.log("arrB: " + arrB[0]);
         select = 2;
         size = arrB.length;
         i = 0;
         var resfun = next(arrB, i, size);
         i = resfun[0];
         size = resfun[1];
-        console.log("sizeB", size);
-        console.log("index", i);
         if(size > 0){
             $('#PNext').show();
         }
@@ -272,8 +256,6 @@ $(document).ready(function () {
             var resfun = next(arrP, i, size);
             i = resfun[0];
             size = resfun[1];
-            //console.log("i: ",resfun[0]);
-            //console.log("size: ",resfun[1]);
             if(size == 0){
                 $(this).hide();
             }
@@ -282,8 +264,6 @@ $(document).ready(function () {
                 var resfun = next(arrA, i, size);
                 i = resfun[0];
                 size = resfun[1];
-                //console.log("i: ",resfun[0]);
-                //console.log("size: ",resfun[1]);
                 if(size == 0){
                     $(this).hide();
                 }
@@ -293,15 +273,10 @@ $(document).ready(function () {
                     var resfun = next(arrB, i, size);
                     i = resfun[0];
                     size = resfun[1];
-                    //console.log("i: ",resfun[0]);
-                    //console.log("size: ",resfun[1]);
                     if(size == 0){
                         $(this).hide();
                     }
                 }else{
-                    console.log("res3: ",resultados[5]);
-                    console.log("i3: ",i);
-                    console.log("size3: ",size);
                    var resfun = next(resultados, i, size);
                     i = resfun[0];
                     size = resfun[1];

@@ -28,7 +28,10 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
 	<!-- End WOWSlider.com HEAD section -->
 	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
@@ -217,7 +220,11 @@
                                     </div>
                             </section>
 
+<<<<<<< HEAD
                                        <!-- Videos -->
+=======
+                    <!-- Videos -->
+>>>>>>> origin/master
                             <section id="videos" class="four">
                                     <div class="container" >
 
@@ -229,39 +236,67 @@
 											<br>
                                             <!-- display the Pierna slider -->
 											    <div id="amazingslider-wrapper-1">
+<<<<<<< HEAD
 											        <div id="amazingslider-1" style="display:block;position:relative;z-index:2;">
 											            <ul class="amazingslider-slides" style="display:none;z-index:3;">
 											                <li>
 											                <img src="images/-sICMHs301M.jpg" alt="Workout 1"  title="Workout 1" />
 											<!--a href="#WP1"><button class="as-btn-blue-medium">Agregar rutina</button></a-->
+=======
+											        <div id="amazingslider-1" style="display:block;position:relative;">
+											            <ul class="amazingslider-slides" style="display:none;">
+											                <li><img src="images/-sICMHs301M.jpg" alt="Workout 1"  title="Workout 1" />
+											<button class="as-btn-blue-medium">Agregar a rutina</button>
+>>>>>>> origin/master
 											                <video preload="none" src="http://www.youtube.com/embed/-sICMHs301M?v=-sICMHs301M" ></video>
 											                </li>
 											                <li><img src="images/k-sn0QRYNAs.jpg" alt="Workout 2"  title="Workout 2" />
 											                <video preload="none" src="http://www.youtube.com/embed/k-sn0QRYNAs?v=k-sn0QRYNAs" ></video>
 											                </li>
 											                <li><img src="images/T_HuY63HOJI.jpg" alt="Workout 3"  title="Workout 3" />
+<<<<<<< HEAD
 											<!--button id="WP3" class="as-btn-blue-medium">Agregar a rutina</button-->
 											                <video preload="none" src="http://www.youtube.com/embed/T_HuY63HOJI?v=T_HuY63HOJI" ></video>
 											                </li>
 											                <li><img src="images/idAnNSCsH2I.jpg" alt="Workout 4"  title="Workout 4" />
 											<!--button id="WP4" class="as-btn-blue-medium">Agregar a rutina</button-->
+=======
+											<button id="WP3" class="as-btn-blue-medium">Agregar a rutina</button>
+											                <video preload="none" src="http://www.youtube.com/embed/T_HuY63HOJI?v=T_HuY63HOJI" ></video>
+											                </li>
+											                <li><img src="images/idAnNSCsH2I.jpg" alt="Workout 4"  title="Workout 4" />
+											<button id="WP4" class="as-btn-blue-medium">Agregar a rutina</button>
+>>>>>>> origin/master
 											                <video preload="none" src="http://www.youtube.com/embed/idAnNSCsH2I?v=idAnNSCsH2I" ></video>
 											                </li>
 											            </ul>
 											            <ul class="amazingslider-thumbnails" style="display:none;">
+<<<<<<< HEAD
 											                <li><img src="images/-sICMHs301M-tn.jpg" alt="Workout 1" title="Workout 1" />
 											                	<input type="submit" value="Submit" style="z-index:10">
 											                </li>
+=======
+											                <li><img src="images/-sICMHs301M-tn.jpg" alt="Workout 1" title="Workout 1" /></li>
+>>>>>>> origin/master
 											                <li><img src="images/k-sn0QRYNAs-tn.jpg" alt="Workout 2" title="Workout 2" /></li>
 											                <li><img src="images/T_HuY63HOJI-tn.jpg" alt="Workout 3" title="Workout 3" /></li>
 											                <li><img src="images/idAnNSCsH2I-tn.jpg" alt="Workout 4" title="Workout 4" /></li>
 											            </ul>
+<<<<<<< HEAD
 											      </div>
 											   </div>
 											   <div id="NV">
 											   </div>
 											    <!-- End Pierna -->
 											    <!--button id="WP1" class="as-btn-blue-medium">Agregar video</button-->
+=======
+
+											      </div>
+											   </div>
+											    <!-- End Pierna -->
+											    <button id="WP1" class="as-btn-blue-medium">Agregar video</button>
+
+>>>>>>> origin/master
 											    <br><br>
 
 											    <h3 align ='left'>Abdomen</h3><br>
@@ -269,6 +304,7 @@
 															<div id="amazingslider-2" style="display:block;position:relative;">
 																<ul class="amazingslider-slides" style="display:none;">
 																	<li><img src="images/hxjKZcOT17E.jpg" alt="Ab Workout 1"  title="Ab Workout 1" data-description="lasjo iwoejoi wekr iuwehr wniejh iiuee wiy skdmjowie akslje" />
+<<<<<<< HEAD
 													<!--button class="as-btn-blue-medium">Agregar a rutina</button-->
 																	<video preload="none" src="http://www.youtube.com/embed/hxjKZcOT17E?v=hxjKZcOT17E" ></video>
 																	</li>
@@ -282,6 +318,21 @@
 																	</li>
 																	<li><img src="images/FH8Cuwkx7j8.jpg" alt="Ab Workout 4"  title="Ab Workout 4" data-description="20 Minute Ab Workout For Women & Men At Home Exercises No Equipment - Donnie Fitness" />
 													<!--button id="WA4" class="as-btn-blue-medium">Agregar a rutina</button-->
+=======
+													<button class="as-btn-blue-medium">Agregar a rutina</button>
+																	<video preload="none" src="http://www.youtube.com/embed/hxjKZcOT17E?v=hxjKZcOT17E" ></video>
+																	</li>
+																	<li><img src="images/ZJ8Zdj0OPMI.jpg" alt="Ab Workout 2"  title="Ab Workout 2" data-description="jaknsd iwoehr kaslkjw wlejfoi oiwshdiwe khd" />
+													<button id="WA2" class="as-btn-blue-medium">Agregar a rutina</button>
+																	<video preload="none" src="http://www.youtube.com/embed/ZJ8Zdj0OPMI?v=ZJ8Zdj0OPMI" ></video>
+																	</li>
+																	<li><img src="images/LebPal5gKrc.jpg" alt="Ab Workout 3"  title="Ab Workout 3" data-description="The 7 Best Ab Exercises" />
+													<button id="WA3" class="as-btn-blue-medium">Agregar a rutina</button>
+																	<video preload="none" src="http://www.youtube.com/embed/LebPal5gKrc?v=LebPal5gKrc" ></video>
+																	</li>
+																	<li><img src="images/FH8Cuwkx7j8.jpg" alt="Ab Workout 4"  title="Ab Workout 4" data-description="20 Minute Ab Workout For Women & Men At Home Exercises No Equipment - Donnie Fitness" />
+													<button id="WA4" class="as-btn-blue-medium">Agregar a rutina</button>
+>>>>>>> origin/master
 																	<video preload="none" src="http://www.youtube.com/embed/FH8Cuwkx7j8?v=FH8Cuwkx7j8" ></video>
 																	</li>
 																</ul>
@@ -294,7 +345,11 @@
 
 														</div>
 														<!-- End AB Slider -->
+<<<<<<< HEAD
 														<!--button id="WA1" class="as-btn-blue-medium">Agregar video</button-->
+=======
+														<button id="WA1" class="as-btn-blue-medium">Agregar video</button>
+>>>>>>> origin/master
 													<br><br>
 
 
@@ -303,6 +358,7 @@
 													        <div id="amazingslider-3" style="display:block;position:relative;">
 													            <ul class="amazingslider-slides" style="display:none;">
 													                <li><img src="images/hAGfBjvIRFI.jpg" alt="Arm workout 1"  title="Arm workout 1" data-description="How To Lose Arm Fat" />
+<<<<<<< HEAD
 													<!--button class="as-btn-blue-medium">Agregar a rutinas</button-->
 													                <video preload="none" src="http://www.youtube.com/embed/hAGfBjvIRFI?v=hAGfBjvIRFI" ></video>
 													                </li>
@@ -316,6 +372,21 @@
 													                </li>
 													                <li><img src="images/zU9ig8oaU6E.jpg" alt="Arm Workout 4"  title="Arm Workout 4" data-description="Toned Arms Workout" />
 													<!--button id="WB4" class="as-btn-blue-medium">Agregar a rutinas</button-->
+=======
+													<button class="as-btn-blue-medium">Agregar a rutinas</button>
+													                <video preload="none" src="http://www.youtube.com/embed/hAGfBjvIRFI?v=hAGfBjvIRFI" ></video>
+													                </li>
+													                <li><img src="images/oUychjqfO8I.jpg" alt="Arm Workout 2"  title="Arm Workout 2" data-description="Tank Top Arms Workout - Shoulders, Arms & Upper Back Workout" />
+													<button id="WB2" class="as-btn-blue-medium">Agregar a rutina</button>
+													                <video preload="none" src="http://www.youtube.com/embed/oUychjqfO8I?v=oUychjqfO8I" ></video>
+													                </li>
+													                <li><img src="images/4pcaD3wInqM.jpg" alt="Arm Workout 3"  title="Arm Workout 3" data-description="Get Madonna&apos;s Arms With This 10-Minute Workout" />
+													<button id="WB3" class="as-btn-blue-medium">Agregar a rutina</button>
+													                <video preload="none" src="http://www.youtube.com/embed/4pcaD3wInqM?v=4pcaD3wInqM" ></video>
+													                </li>
+													                <li><img src="images/zU9ig8oaU6E.jpg" alt="Arm Workout 4"  title="Arm Workout 4" data-description="Toned Arms Workout" />
+													<button id="WB4" class="as-btn-blue-medium">Agregar a rutinas</button>
+>>>>>>> origin/master
 													                <video preload="none" src="http://www.youtube.com/embed/zU9ig8oaU6E?v=zU9ig8oaU6E" ></video>
 													                </li>
 													            </ul>
@@ -327,6 +398,7 @@
 													            </ul>
 
 													    </div>
+<<<<<<< HEAD
 													    <!--button id="WB1" class="as-btn-blue-medium">Agregar video</button-->
    										 <!-- End Abs -->
 										<br><br>
@@ -371,6 +443,10 @@
                                             </div>
 
 
+=======
+													    <button id="WB1" class="as-btn-blue-medium">Agregar video</button>
+   										 <!-- End Abs -->
+>>>>>>> origin/master
                                     </div>
                             </section>
             </div>
@@ -393,7 +469,10 @@
             <script src="assets/js/util.js"></script>
             <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
             <script src="assets/js/main.js"></script>
+<<<<<<< HEAD
             <script src="js/controllerVideos.js"></script>
+=======
+>>>>>>> origin/master
 
 	<!-- Videos Scripts -->
 			<!-- Pierna -->
