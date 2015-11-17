@@ -379,8 +379,8 @@
                                                     <h4>Añadir a rutina</h4></br>
                                                     <p>ID rutina 
                                                         <select id="rutina">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
+                                                            <!--option value="1">1</option>
+                                                            <option value="2">2</option-->
                                                         </select></p>
                                                     <p id="respuesta"></p>
                                                     <form>

@@ -33,11 +33,12 @@
 
 			return $result;
         }
-        function getRutinas(){
+        function getRutinas($sesion){
             $conexion= new mysqli('localhost','root','Konichiwa%07','GymTrainer2')
 			or die("Fallo en el establecimiento de la conexion");
-            $results = mysqli_query($conexion, $sql);
-            $sql = "SELECT id_rutina FROM rutina WHERE email = ".$_SESSION['emailUsuario'];
+            //$results = mysqli_query($conexion, $sql);
+            //$sql = "SELECT id_rutina FROM rutina WHERE email = ".$_SESSION['emailUsuario'];
+            $sql = "SELECT id_rutina FROM rutina WHERE email = '".$sesion."'";
             $resRutinaVid = mysqli_query($conexion, $sql);
             $result = $conexion->query($sql);
             if($conexion->query($sql) === false){

@@ -5,6 +5,7 @@ $(document).ready(function () {
             $.post("recursos/servicios/resConsultarVideos.php", {categoria: cat},
 				function (res) {
                     if (res !== null) {
+                        //console.log("res videos: ", res);
                         var videos = JSON.parse(res);
                         if(cat == "Pierna"){
                             for (var i in videos) {
@@ -97,19 +98,19 @@ $(document).ready(function () {
         return arr2;
     }
     
-    /*function obtenerRutinas() {
-        console.log("id_rutinas: ", $_SESSION['emailUsuario']);
+    function obtenerRutinas() {
             $.post("recursos/servicios/rutinasCombo.php", {},
 				function (res) {
                 if(res != null){
-                    var rutinas = JSON.parse(res);
-                    
-                    for(var i in rutinas){
-                        $('#rutina').append('<option value="'+rutinas[i]+'">'+rutinas[i]'</option>');
+                    console.log(res);
+                    var arrRutinas = JSON.parse(res);
+                    console.log("rutinas: ", arrRutinas);
+                    for(var i in arrRutinas){
+                        $('#rutina').append('<option value="'+arrRutinas[i]+'">'+arrRutinas[i]+'</option>');
                     }
                 }
             });
-    }*/
+    }
     
     function getIDVideo(url){
              $.post("recursos/servicios/resIDVideo.php", {url: url},
@@ -327,9 +328,8 @@ $(document).ready(function () {
         $('#layerAdd').show();
         var url = $('#PA1').attr('href');
         getIDVideo(url);
-        //obtenerRutinas();
+        obtenerRutinas();
         $('#respuesta').text("");
-        console.log("sesion", $_SESSION['emailUsuario']);
         
     });
     
@@ -337,7 +337,7 @@ $(document).ready(function () {
         $('#layerAdd').show();
         var url = $('#PA2').attr('href');
         getIDVideo(url);
-        //obtenerRutinas();
+        obtenerRutinas();
         $('#respuesta').text("");
     });
     
@@ -345,7 +345,7 @@ $(document).ready(function () {
         $('#layerAdd').show();
         var url = $('#PA3').attr('href');
         getIDVideo(url);
-        //obtenerRutinas();
+        obtenerRutinas();
         $('#respuesta').text("");        
     });
     
@@ -361,6 +361,7 @@ $(document).ready(function () {
     //Cancelar
     $('#cancelarAdd').click(function() {
         $('#layerAdd').hide();
+        $('#rutina').find('option').remove();
     }); 
 
 
