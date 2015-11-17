@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     
-        function mostrarVideos(cat) {
+    function mostrarVideos(cat) {
             $.post("recursos/servicios/resConsultarVideos.php", {categoria: cat},
 				function (res) {
                     if (res !== null) {
@@ -96,6 +96,36 @@ $(document).ready(function () {
         var arr2 = [index, size];
         return arr2;
     }
+    
+    /*function obtenerRutinas() {
+        console.log("id_rutinas: ", $_SESSION['emailUsuario']);
+            $.post("recursos/servicios/rutinasCombo.php", {},
+				function (res) {
+                if(res != null){
+                    var rutinas = JSON.parse(res);
+                    
+                    for(var i in rutinas){
+                        $('#rutina').append('<option value="'+rutinas[i]+'">'+rutinas[i]'</option>');
+                    }
+                }
+            });
+    }*/
+    
+    function getIDVideo(url){
+             $.post("recursos/servicios/resIDVideo.php", {url: url},
+				function (res) {
+                 //console.log(res);
+                 idvideo=res;
+             });
+    }
+    
+    function agregarRutina(rutina, video){
+            $.post("recursos/servicios/resAgregarVideo.php", {rutina: rutina, video:video},
+				function (res) {
+                    //console.log(res);
+                    $('#respuesta').text(res);
+             });
+        }
 
     //Pierna
     var arrP = [];
@@ -115,7 +145,9 @@ $(document).ready(function () {
     $('.cuadro2').hide();
     $('.cuadro3').hide();
     $('#PNext').hide();
+    $('#layerAdd').hide();
     var resultados = [];
+    var idvideo;
     
     //Busqueda
     $('#btnBuscar').click(function () {
@@ -289,9 +321,47 @@ $(document).ready(function () {
         }
 		
 	});
-
-
-
+    
+    //Agregar
+    $("#Agregar1").click(function() {
+        $('#layerAdd').show();
+        var url = $('#PA1').attr('href');
+        getIDVideo(url);
+        //obtenerRutinas();
+        $('#respuesta').text("");
+        console.log("sesion", $_SESSION['emailUsuario']);
+        
+    });
+    
+    $("#Agregar2").click(function() {
+        $('#layerAdd').show();
+        var url = $('#PA2').attr('href');
+        getIDVideo(url);
+        //obtenerRutinas();
+        $('#respuesta').text("");
+    });
+    
+    $("#Agregar3").click(function() {
+        $('#layerAdd').show();
+        var url = $('#PA3').attr('href');
+        getIDVideo(url);
+        //obtenerRutinas();
+        $('#respuesta').text("");        
+    });
+    
+    //Aceptar
+    $("#aceptarAdd").click(function() {
+        var rutina = $( "#rutina option:selected" ).text();
+        //console.log("id_Video: ", idvideo);
+        //console.log("id_rutina", rutina);      
+        agregarRutina(rutina, idvideo);
+  
+    });
+    
+    //Cancelar
+    $('#cancelarAdd').click(function() {
+        $('#layerAdd').hide();
+    }); 
 
 
 });

@@ -51,8 +51,8 @@
                 <!-- Logo -->
                         <div id="logo">
                                 <span class="image avatar48"><img src="images/avatar1.png" alt="" /></span>
-                                <h1 id="title">Leslie Rosales</h1>
-                                <p>roses.les@gmail.com</p>
+                                <h1 id="title">Marisol Sasgado</h1>
+                                <p>marisol@gmail.com</p>
                         </div>
 
                 <!-- Nav -->
@@ -293,6 +293,7 @@
 																</ul>
 
 														</div>
+                                                    </div>
 														<!-- End AB Slider -->
 														<!--button id="WA1" class="as-btn-blue-medium">Agregar video</button-->
 													<br><br>
@@ -328,6 +329,7 @@
 
 													    </div>
 													    <!--button id="WB1" class="as-btn-blue-medium">Agregar video</button-->
+                                                    </div>
    										 <!-- End Abs -->
 										<br><br>
    										 <div id="AddVideos">
@@ -337,7 +339,7 @@
 											  <li><a id="AbRef" href="#Abdominales">Abdominales</a></li>
 											  <li><a id="BrazoRef" href="#Brazo">Brazo</a></li>
 											</ul>
-                                            
+                                             
 											<div id="General">
 												<form>
 													<table>
@@ -350,19 +352,19 @@
 												<div class="cuadro1">
 													<img id="PI1" src="images/pruebas/-sICMHs301M.jpg" alt="P1" width='230'></img>
                                                     <p id="PP1">Quema 300 calorías en 30 minutos</p>
-													<button>Agregar</button>
+													<button id="Agregar1">Agregar</button>
 													<a id="PA1" href="http://www.youtube.com/embed/-sICMHs301M?v=-sICMHs301M"><button>Ver video</button></a>
 											    </div>
 											    <div class="cuadro2">
 													<img id="PI2" src="images/pruebas/k-sn0QRYNAs.jpg" alt="P2" width='230'></img>
                                                     <p id="PP2">Bikini Abs Workout, Bikini series</p>
-													<button>Agregar</button>
+													<button id="Agregar2">Agregar</button>
 													<a id="PA2" href="http://www.youtube.com/embed/k-sn0QRYNAs?v=k-sn0QRYNAs"><button>Ver video</button></a>
 											    </div>
 											    <div class="cuadro3">
 													<img id="PI3" src="images/pruebas/T_HuY63HOJI.jpg" alt="P3" width='230'></img>
                                                     <p id="PP3">Body Rock |Day 25 Upper Body Blast </p>
-													<button>Agregar</button>
+													<button id="Agregar3">Agregar</button>
 													<a id="PA3" href="http://www.youtube.com/embed/T_HuY63HOJI?v=T_HuY63HOJI"><button>Ver video</button></a>
 											    </div>
                                                         <div id="PNext" align="Right" style="text-decoration:underline;">Next</p></div>
@@ -372,6 +374,22 @@
 											        	<td><div id="PNext" align="Right" style="text-decoration:underline;">Next</p></div></td></tr>
 											        </table>
 												</form-->
+                                             <!--Layer Add Video-->
+                                                <div id="layerAdd">
+                                                    <h4>Añadir a rutina</h4></br>
+                                                    <p>ID rutina 
+                                                        <select id="rutina">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                        </select></p>
+                                                    <p id="respuesta"></p>
+                                                    <form>
+													   <table>
+											    		<tr><td><input type="button" value="Añadir" id="aceptarAdd"></td>
+											        	<td><input type="button" value="Cerrar" id="cancelarAdd"></td></tr>
+											         </table>
+												    </form>
+                                                </div> 
 											     
                                                  
                                             </div>
@@ -380,6 +398,7 @@
                                     </div>
                             </section>
             </div>
+   
 
     <!-- Footer -->
             <div id="footer">
