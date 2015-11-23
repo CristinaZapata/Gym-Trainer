@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	$(".btn").click(function(){
 		console.log("click");
+		$(".btn").attr("disabled",true);
+
 		var nombre = $("#nombre").val();
 		var apellidos = $("#apellidos").val();
 		var username = $("#username").val();
@@ -14,6 +16,7 @@ $(document).ready(function(){
 			data:datos,
 			success:function(html) {
 				$("#alert").html(html);
+				$(".btn").attr("disabled",false);
 				console.log("aqui");
 				validation();
 				if(html === "no_errors") location.href = "login.php"

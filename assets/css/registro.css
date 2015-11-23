@@ -117,8 +117,9 @@ a{
     cursor: pointer;
 }
 
-.login-block button:hover {
-    background: #1fefc5;
+.login-block button:disabled {
+    background: #BBBBBB;
+    cursor: wait;
 }
 
 .warn{
