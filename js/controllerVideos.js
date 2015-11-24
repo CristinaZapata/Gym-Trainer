@@ -127,6 +127,29 @@ $(document).ready(function () {
                     $('#respuesta').text(res);
              });
         }
+    function obtenerVideosRutinas(){
+        $.post("recursos/servicios/videosrutinas.php", {},
+				function (res) {
+                    if (res !== null) {
+                        console.log("res rutinas: ", res);
+                        var rvideos = JSON.parse(res);
+                        for (var i in rvideos) {
+                            $('#rutina'+rvideos[i][0]+'').show();
+                                $('#rutina'+rvideos[i][0]+'').append("<a href="+rvideos[i][2]+" ><img border='0' src="+rvideos[i][3]+ " width='100' height='100'><p>"+rvideos[i][4]+"</p></a>");
+                            $('#rutina'+rvideos[i][0]+'').show();
+                        }   
+                    }
+             });
+    }
+    
+        function crearRutina(){
+        $.post("recursos/servicios/añadirRutina.php", {},
+				function (res) {
+                    if (res !== null) {
+                        console.log("Rutina creada");
+                    }
+             });
+    }
 
     //Pierna
     var arrP = [];
@@ -149,7 +172,13 @@ $(document).ready(function () {
     $('#layerAdd').hide();
     var resultados = [];
     var idvideo;
-    
+    $('#rutina1').hide();
+    $('#rutina2').hide();
+    $('#rutina3').hide();
+    $('#rutina4').hide();
+    $('#rutina5').hide();
+
+    //obtenerVideosRutinas();
     //Busqueda
     $('#btnBuscar').click(function () {
         $('#DivInicio').hide();
@@ -330,6 +359,8 @@ $(document).ready(function () {
         getIDVideo(url);
         obtenerRutinas();
         $('#respuesta').text("");
+        //$('#rutina1').empty();
+        //$('#rutina4').empty();
         
     });
     
@@ -355,6 +386,8 @@ $(document).ready(function () {
         //console.log("id_Video: ", idvideo);
         //console.log("id_rutina", rutina);      
         agregarRutina(rutina, idvideo);
+        obtenerVideosRutinas();
+        $("#introRut").hide();
   
     });
     
@@ -362,6 +395,11 @@ $(document).ready(function () {
     $('#cancelarAdd').click(function() {
         $('#layerAdd').hide();
         $('#rutina').find('option').remove();
+    }); 
+    
+    //Añadir rutina
+        $('#crearRutina').click(function() {
+            crearRutina();
     }); 
 
 

@@ -1,5 +1,12 @@
-#fitgirl img{
-	position:absolute;
-	left: 800px;
-	top: 950px;
+#avatar{
+	position:relative;
+	left: 250px;
+	top: 10px;
+	width:50%;
+}
+
+#IMC{
+	position:relative;
+	left: 200px;
+	/*top: 100px;*/
 }

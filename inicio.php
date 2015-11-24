@@ -50,9 +50,10 @@
 
                 <!-- Logo -->
                         <div id="logo">
-                                <span class="image avatar48"><img src="images/avatar1.png" alt="" /></span>
-                                <h1 id="title">Marisol Sasgado</h1>
-                                <p>marisol@gmail.com</p>
+                                <span class="image avatar48"><img id="imgIcon" src="images/avatar1.png" alt="" /></span>
+                       
+                                <h1 id="title"><?php echo $_SESSION['nombreUsuario'] . " ". $_SESSION['apellidoUsuario']; ?></h1>
+                                <p><?php echo $_SESSION['emailUsuario']; ?></p>
                         </div>
 
                 <!-- Nav -->
@@ -60,9 +61,9 @@
 
                                 <ul>
                                         <li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-                                        <li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Perfil</span></a></li>
                                         <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-dribbble">Rutinas</span></a></li>
                                         <li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Videos</span></a></li>
+                                        <li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Perfil</span></a></li>
                                         <li><a href='recursos/servicios/CerrarSesion.php?cerrar=true' id="contact-link" class="skel-layers-ignoreHref"><span align="center">Cerrar Sesi&oacute;n</span></a></li>
                                 </ul>
                         </nav>
@@ -75,9 +76,6 @@
                             <ul class="icons">
                                     <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                                     <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                    <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-                                    <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-                                    <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
                             </ul>
                 </div>
 
@@ -151,33 +149,7 @@
                                     </div>
                             </section>
 
-                    <!-- Perfil -->
-                            <section id="portfolio" class="two">
-                                    <div class="container">
-
- 											<header>
-
- 												<div id = "fitgirl"> <img src="images/FitGirl.png"/></div>
-                                                    <h2 class="alt"><strong>Marisol Salgado</strong></h2>
-                                                    <p align="left">Correo electrónico: <span style="padding-left:30px"><input type="text" placeholder="ma.salg@gmail.com"/> </span><br/> <br/>
-                                                    Contraseña:<span style="padding-left:95px"><input type="password" /> </span><br/><br/>
-
-                                                    Fecha de nacimiento:<span style="padding-left:15px"><input type="date"/></span><br/><br/>
-                                                    Sexo:<br/>
-                                                    	<input type="radio" name="sexo" value="femenino">Femenino<br/>
-														<input type="radio" name="sexo" value="masculino">Masculino<br/>
-                                                    <br/>
-                                                    Altura: <span style="padding-left:20px"><input type="text" width="20"/> m</span><br/><br/>
-                                                    Peso: <span style="padding-left:20px"><input type="text" width="20"/> kg</span></p>
-
-                                                    <a href="#portfolio" class="button scrolly">Actualizar</a>
-
-
-                                            </header>
-
-
-                                    </div>
-                            </section>
+                    
 
                     <!-- Rutinas -->
                             <section id="about" class="three">
@@ -185,15 +157,22 @@
                                             <header>
                                                     <h2>Mis Rutinas</h2>
                                             </header>
+                                        <div id="introRut">
 											<p id="intro">Hola, a&uacute;n no tienes rutinas asignadas, pasa a la secci&oacute;n de videos
 											para conocer las rutinas que tenemos para ti :)
-											</p>
-											<div id="irVideosPierna"><h3>Pierna</h3></div>
+											</p></div>
+											<div id="rutina1"><h3>Rutina 1</h3></div>
 											<br>
 											<br>
-											<div id="irVideosAb"> <h3>Abdomen</h3><br></div>
+											<div id="rutina2"> <h3>Rutina 2</h3><br></div>
 											 <br>
-											 <div id="irVideosBrazo"><h3>Brazo</h3><br></div>
+											 <div id="rutina3"><h3>Rutina 3</h3><br></div>
+                                            <br>
+                                        <div id="rutina4"><h3>Rutina 4</h3><br></div>
+                                            <br>
+                                        <div id="rutina5"><h3>Rutina 5</h3><br></div>
+                                            <br>
+                                        <!--button id="crearRutina" >Crear rutina</button-->
 											 <!-- Rutinas Pierna >
 											 <div id="Rpiernas">
 											    <div id="amazingslider-wrapper-4" >
@@ -217,7 +196,7 @@
                                     </div>
                             </section>
 
-                                       <!-- Videos -->
+                     <!-- Videos -->
                             <section id="contact" class="four">
                                     <div class="container" >
 
@@ -397,6 +376,41 @@
 
                                     </div>
                             </section>
+                            
+                            <!-- Perfil -->
+                            <section id="portfolio" class="two">
+                                    <div class="container">
+
+ 											<header>
+ 											
+ 											<h2 class="alt"><strong><?php echo $_SESSION['nombreUsuario'] . " ". $_SESSION['apellidoUsuario']; ?></strong></h2>
+                                                    <p align="left">Correo electrónico: <span style="padding-left:30px"><input type="text" id="email" value="<?php echo $_SESSION['emailUsuario']; ?>" size="25"/></span><br/> <br/>
+                                                    Contraseña:<span style="padding-left:95px"><input id="contrasena" type="password" value="<?php echo $_SESSION['passwordUsuario']; ?>"/> </span><br/><br/>
+                                                    
+                                                    <img id="avatar" src="images/girl1.png"/>
+		
+													<form id="formaPerfil" style="width: 500px" action="recursos/servicios/Perfil.php" method="post">
+														Fecha de nacimiento:<span style="padding-left:15px"><input id="fecha_nac" name="fecha_nac" type="date"/></span><br/>
+														Sexo:<br/>
+															<input type="radio" class="radioBtnSexo" name="sexo" value="Femenino">Femenino<br/>
+															<input type="radio" class="radioBtnSexo" name="sexo" value="Masculino">Masculino<br/>                                                   
+														<br/>
+														Altura: <input id="altura" name="altura" type="text" width="20"/> m<br/><br/>
+														Peso: <span style="padding-left:20px"><input id="peso" name="peso" type="text" width="20"/> kg</span></p>
+													
+														<button id="registrarPerfil">Actualizar</button>
+														<div id="alert" style="color:green;"></div>
+                                                    </form>
+													
+													
+													<div id="IMC">
+														<p><strong>IMC:</strong></p>
+														<div id="valorIMC"></div>
+													</div>
+													
+                                            </header>
+                                    </div>
+                            </section>
             </div>
    
 
@@ -431,7 +445,9 @@
     		<script src="sliderengine/initslider-3.js"></script>
     		<!-- Rutina Pierna -->
     		<script src="sliderengine/initslider-4.js"></script>
-    		<script src="assets/js/controller.js"></script>
+    		<script src="assets/js/controller.js"></script>   
+            <script src="js/controllerPerfil.js"></script>
+            <script src="js/controllerUltimaSesion.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

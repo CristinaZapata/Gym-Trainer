@@ -20,6 +20,9 @@
 				if($row["password"]== $password){
 					session_start();
 					$_SESSION['emailUsuario'] = $row['email'];
+					$_SESSION['passwordUsuario'] = $row['password'];
+					$_SESSION['nombreUsuario'] = $row['nombre'];
+					$_SESSION['apellidoUsuario'] = $row['apellido'];
 					echo 'no_errors';
 					//header("Location: http://localhost/Gym-Trainer/inicio.php");
 				}else{
