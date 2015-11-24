@@ -14,22 +14,22 @@
 			$password= $_POST['password'];
 			$password2= $_POST['password2'];
 
-			$verify = new EmailVerify();
+			//$verify = new EmailVerify();
 			//$verify->debug_on = true;
 			$verEmail;
 
-			$verify->local_user = 'localuser';	//username of your address from which you are sending message to verify
-			$verify->local_host = 'localhost';	//domain name of your address
+			//$verify->local_user = 'localuser';	//username of your address from which you are sending message to verify
+			//$verify->local_host = 'localhost';	//domain name of your address
 
-			if($verify->verify($email)){
+			//if($verify->verify($email)){
 				$verEmail=1;
 				$user = new user();
 				$result= $user->agregarRegistro($nombre, $apellidos, $email, $password);
-			}else{
+			/*}else{
 				$result=0;
 				$verEmail=0;
 				echo 'Escriba un email existente';
-			}
+			}*/
 
 			if($result == 1 && $verEmail==1){
 				echo 'no_errors';
